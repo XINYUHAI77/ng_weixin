@@ -1,0 +1,12 @@
+
+<div class="ind_lst">
+  <ul class="lst clearfix">
+      <li ng-repeat="d in dishList"><a href="#/detail/{{d.id}}" class="inde_border">
+          <img ng-src="{{'/Public/Uploads/'+d.sm_logo}}">
+          <p class="overtext">{{d.goods_name}}</p>
+          <dl class="clearfix">
+              <dd><span>{{d.price}}</span>元</dd>
+          </dl>
+      </a></li>
+  </ul>
+</div>

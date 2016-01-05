@@ -1,0 +1,33 @@
+
+
+<div class="banner">
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" ><img ng-src="{{'/Public/Uploads/'+dish.logo}}" style="width: 100%;"></div>
+        </div>
+    </div>
+</div>
+
+
+<ul class="name_det">
+  <li>{{dish.goods_name}}</li>
+  <li><span>优惠信息</span><span>送xx积分/优惠卷x张</span></li>
+  <li class="conuts"><a href="javascript:void(0);" id="reduce_num" class="reduce_num" ng-click="rednum()">-</a>
+      <input type="text" ng-model='buyodrder.num' class="amount"></span>
+      <a href="javascript:void(0);" id="add_num" class="add_num"  ng-click="addnum()">+</a></span></li>
+</ul>
+<ul class="buy_det">
+  <li>零售价：<span>{{dish.price}}</span>元</li>
+  <li>规  格: 500ml</li>
+  <li>度  数: 42度</li>
+  <li>运  费: 10元</li>
+    <li><a href="#/pay/{{buyodrder.num}}/{{buyodrder.id}}">立即购买</a></li>
+</ul>
+<div class="good_dets">
+  <h1 class="good_dets_tip"><p>商品详情</p></h1>
+
+  <ul class="buybtn clearfix">
+      <img ng-src="{{'/Public/Uploads/'+dish.logo}}" style="width: 100%;">
+      <img ng-src="{{'/Public/Uploads/'+dish.logo}}" style="width: 100%;">
+  </ul>
+</div>

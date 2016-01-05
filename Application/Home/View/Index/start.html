@@ -1,0 +1,54 @@
+
+
+<div class="search">
+  <form action=""><input type="text"><input type="submit" class="text_inde"></form>
+</div>
+<!--banner-->
+<!-- Swiper -->
+<div class="banner">
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" ng-repeat="d in dishList | limitTo : 1"><a href="#/detail/{{d.id}}"><img ng-src="{{'/Public/Uploads/'+d.sm_logo}}" style="width: 100%"></a></div>
+        </div>
+    </div>
+</div>
+
+
+<div class="ind_lst">
+  <h1 class="ind_lst_tip">
+    <ul class=" clearfix">
+      <li><a  href="#/hot">新品速递</a></li>
+      <li><a  href="#/hot">more &gt;</a></li>
+    </ul>
+  </h1>
+  <ul class="lst clearfix">
+
+  <li ng-repeat="d in dishList"><a href="#/detail/{{d.id}}" class="inde_border">
+  <img ng-src="{{'/Public/Uploads/'+d.sm_logo}}">
+   <p class="overtext">{{d.goods_name}}</p>
+   <dl class="clearfix">
+     <dd><span>{{d.price}}</span>元</dd>
+   </dl>
+  </a></li>
+  </ul>
+</div>
+
+<div class="ind_lst">
+  <h1 class="ind_lst_tip">
+    <ul class=" clearfix">
+      <li><a  href="#/hot">热销产品</a></li>
+      <li><a  href="#/hot">more &gt;</a></li>
+    </ul>
+  </h1>
+  <ul class="lst clearfix">
+      <li ng-repeat="d in dishList"><a href="#/detail/{{d.id}}" class="inde_border">
+          <img ng-src="{{'/Public/Uploads/'+d.sm_logo}}">
+          <p class="overtext">{{d.goods_name}}</p>
+          <dl class="clearfix">
+              <dd><span>{{d.price}}</span>元</dd>
+          </dl>
+      </a></li>
+  </ul>
+</div>
+
+

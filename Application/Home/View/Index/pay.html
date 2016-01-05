@@ -1,0 +1,39 @@
+
+<nav class="nav">
+  <p onclick="history.go(-1)" class="back text_inde">返回</p>
+  <h1>付款订单</h1>
+</nav>
+
+<form action="">
+<div class="car">
+   <ul class="clearfix">
+    <li  class="carpic clearfix" style="width:100%; padding:0; min-height:92px;background: url({{'/Public/Uploads/'+dishorder.logo}}) no-repeat 6px top; background-size:92px;">
+      <dl style="padding-left:104px; text-align:left;">
+        <dd style="padding-top:8px">{{dishorder.goods_name}}</dd>
+        <dd style="padding-top:8px">零售价：<span class="rednum">{{dishorder.price}}</span>元</dd>
+        <dd class="points" style="padding-top:8px">共<span class="rednum">{{detailorder.num}}</span>件，合计<span class="rednum">{{detailorder.num*dishorder.price | currency : '￥'}}</span>元</dd>
+      </dl>
+    </li>
+  </ul>
+</div>
+<div class="addr_det">
+<table>
+  <tr>
+    <td>联系人：</td>
+    <td><input type="text" name="user_name" ng-model="order_menages.user_name"></td>
+  </tr>
+  <tr>
+    <td>联系电话：</td>
+    <td><input type="text" name="phone"  ng-model="order_menages.phone"></td>
+  </tr>
+  <tr>
+    <td>收货地址：</td>
+    <td><textarea class="txtarea300" name="addr"  ng-model="order_menages.addr"></textarea></td>
+  </tr>
+</table>
+</div>
+</form>
+<ul class="pays">
+  <li>总金额：<span class="redtotal"> {{detailorder.num*dishorder.price | currency : '￥'}}</span>元</li>
+  <li><a href="javascript:void(0)" ng-click="submit()">确认付款</a></li>
+</ul>
